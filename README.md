@@ -1,0 +1,2 @@
+# minimo
+PyQGIS Plugin folder
