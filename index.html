@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference to BibTeX Converter</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Reference to BibTeX Converter</h1>
+
+        <div class="form-group">
+            <label for="formatSelect">Select Reference Format:</label>
+            <select id="formatSelect" class="form-control">
+                <option value="apa">APA</option>
+                <option value="ieee">IEEE</option>
+                <option value="harvard">Harvard</option>
+                <option value="mla">MLA</option>
+                <option value="chicago">Chicago</option>
+                <option value="vancouver">Vancouver</option>
+                <option value="cse">CSE</option>
+                <option value="acs">ACS</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <p>Please enter your reference in the selected format or paste a DOI:</p>
+            <textarea id="referenceInput" class="form-control" placeholder="Enter your reference here..."></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-block" onclick="convertToBib()">Convert to BibTeX</button>
+
+        <div class="form-group mt-4">
+            <p>Or paste a DOI to automatically generate a BibTeX entry:</p>
+            <input type="text" id="doiInput" class="form-control" placeholder="Enter DOI here...">
+        </div>
+
+        <button class="btn btn-success btn-block" onclick="generateBibFromDOI()">Generate from DOI</button>
+
+        <h2 class="mt-4">Generated BibTeX Entry:</h2>
+        <textarea id="bibtexOutput" class="form-control" readonly></textarea>
+
+        <button class="btn btn-secondary btn-block mt-3" onclick="generateBibFile()">Download Bib File</button>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
