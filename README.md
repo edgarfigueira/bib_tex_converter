@@ -1,2 +1,2 @@
-# minimo
-PyQGIS Plugin folder
+# BibTex Converter
+BibTex folder
